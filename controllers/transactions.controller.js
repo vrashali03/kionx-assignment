@@ -54,6 +54,9 @@ async function getTransactions(req, res) {
     });
   } catch (error) {
     console.error("Error fetching transactions:", error);
+    return res
+      .status(500)
+      .send({ message: "Error occurred while fetching transactions." });
   }
 }
 
