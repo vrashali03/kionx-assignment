@@ -22,12 +22,13 @@ const transactionSchema = mongoose.Schema(
     gasUsed: Number,
     confirmations: Number,
     isError: Number,
+    address: String,
   },
   {
     timestamps: true,
   }
 );
 
-const Transaction = mongoose.model("Tracsaction", transactionSchema);
+const Transaction = mongoose.model("Transaction", transactionSchema);
 
 module.exports = Transaction;
